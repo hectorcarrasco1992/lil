@@ -87,26 +87,40 @@ const Lil = () => {
     
     },
 
-    removeFromEnd: function() {
+    removeFromEnd: function(element) {
       let current = this.head
 
+      let next = current.next
       while(current.next){
         current = current.next
+         next = current.next
+         
         
         
       }
-
+      console.log(next)
       let last = current.value
-      current = ''
+      current = next.next
+      
       
       
       return last
+
+      
+
 
       
       
     },
 
     getAt: function(i) {
+      if(!this.head){
+        return null
+      }
+        let current = this.head
+      if(i > 0 ){
+        return current.value
+      }
       
 
       
