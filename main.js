@@ -17,12 +17,12 @@ const Lil = () => {
       let  current = this.head
       while(current !== null){
         arr.push(current.value)
-        console.log(arr)
+        // console.log(arr)
         current = current.next
         
       }
 
-      console.log(current);
+      // console.log(current);
 
       return arr
      
@@ -76,7 +76,7 @@ const Lil = () => {
         this.head = current.next
         
         
-        console.log(this.head)
+        // console.log(this.head)
       
       
 
@@ -90,17 +90,24 @@ const Lil = () => {
     removeFromEnd: function() {
       let current = this.head
 
-      while(current){
+      while(current.next){
         current = current.next
+        
+        
       }
 
-      current = null
+      let last = current.value
+      current = ''
+      
+      
+      return last
 
-      return current.next
-    
+      
+      
     },
 
     getAt: function(i) {
+      
 
       
     
