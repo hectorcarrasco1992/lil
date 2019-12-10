@@ -133,6 +133,24 @@ const Lil = () => {
     },
 
     removeAt: function(i) {
+      if(!this.head){
+        return null
+      }
+      let current = this.head
+      let count = 0
+      
+      while(count < i -1){
+        
+        current = current.next
+        count ++
+         
+      }
+
+      const remove = current.next.value
+      current.next=current.next.next
+
+
+      return remove
 
     
     },
