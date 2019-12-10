@@ -115,17 +115,21 @@ const Lil = () => {
     },
 
     getAt: function(i) {
+      let count = 0
+      let current = this.head
       if(!this.head){
         return null
       }
-        let current = this.head
-      if(i > 0 ){
-        return current.value
+      
+      while(count < i){
+        current = current.next
+        count ++
+         
       }
-      
 
-      
-    
+      return current.value
+         
+        
     },
 
     removeAt: function(i) {
