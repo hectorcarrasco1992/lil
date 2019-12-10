@@ -87,20 +87,21 @@ const Lil = () => {
     
     },
 
-    removeFromEnd: function(element) {
+    removeFromEnd: function() {
       let current = this.head
 
-      let next = current.next
+      let previous = current
       while(current.next){
+        previous = current
         current = current.next
-         next = current.next
+         
          
         
         
       }
-      console.log(next)
+    
       let last = current.value
-      current = next.next
+      previous.next = null
       
       
       
